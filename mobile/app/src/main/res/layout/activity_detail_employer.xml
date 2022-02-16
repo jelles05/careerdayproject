@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailEmployee">
+
+    <com.example.mobile.views.HeaderLogoView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15">
+
+    </com.example.mobile.views.HeaderLogoView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="85"
+        android:background="@color/red_background">
+
+        <LinearLayout
+            android:id="@+id/fields_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Employeur"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <com.example.mobile.views.FieldView
+                android:id="@+id/field_view_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:color="@color/gray_field"
+                app:label="Nom"
+                app:value="Prefontaine" />
+
+            <com.example.mobile.views.FieldView
+                android:id="@+id/field_view_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:color="@color/black"
+                app:label="Prénom"
+                app:value="Victor" />
+
+            <com.example.mobile.views.FieldView
+                android:id="@+id/field_view_email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:color="@color/gray_field"
+                app:label="Courriel"
+                app:value="Victor.P@codeBox.com" />
+
+            <com.example.mobile.views.FieldView
+                android:id="@+id/field_view_compagnie_owner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:color="@color/black"
+                app:label="Entreprise"
+                app:value="The office" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

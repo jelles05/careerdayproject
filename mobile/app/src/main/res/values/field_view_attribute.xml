@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FieldView">
+        <attr name="label" format="string" />
+        <attr name="value" format="string" />
+        <attr name="color" format="color" />
+        <attr name="single_field" format="string" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,1417 @@
+*, HTML {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #EC2F41;
+    font-family: 'Spartan', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+    background: #363636;
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: #fff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #FFFFFF80;
+}
+
+/*
+    ----------------------------------------------------------- MOBILE FIRST -----------------------------------------------------------
+*/
+
+
+/* ~~~~~~~~~~~~~NOTIFICATIONS~~~~~~~~~~~~~~ */
+
+.new-notification-alert {
+    right: 18%;
+}
+
+#collapsible {
+    display: none;
+}
+
+.lbl-toggle {
+    display: block;
+    font-family: 'Spartan', sans-serif;
+    font-size: 12px;
+    text-align: center;
+
+    color: #fdfdfb;
+    background: #363636;
+    cursor: pointer;
+
+}
+
+.collapsible-content .content-inner {
+    background: rgba(247, 94, 83, 0.4);
+    padding: .5rem 1rem;
+}
+
+.collapsible-content {
+    font-size: 12px;
+    max-height: 0px;
+    max-width: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked+.lbl-toggle+.collapsible-content {
+    max-height: 200px;
+    max-width: 100%;
+    overflow: scroll;
+}
+
+.notif-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: rgba(247, 94, 83, 0.5);
+}
+
+.notif-item:hover {
+    background: rgba(247, 94, 83, 1);
+}
+
+.notif-item-read {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: #363636;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ LOGIN & SIGN UP ~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.header-login {
+    background-color: white;
+    padding-top: 15px;
+    height: 80px;
+}
+
+.logo {
+    display: block;
+    height: 70%;
+    margin: auto;
+}
+
+.form-container {
+    background-color: #F4E1E3;
+    width: 45%;
+    margin: 40px auto;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.form-container>div>div {
+    margin: 20px 0;
+}
+
+.form-container legend {
+    font-weight: bold;
+}
+
+.form-container input:not([type="checkbox"]) {
+    font-family: 'Spartan', sans-serif;
+    text-align: center;
+    width: 40%;
+    padding: 5px;
+}
+
+.form-container button, .form-container input[type='submit'] {
+    font-family: 'Spartan', sans-serif;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 40%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~ NAVBAR & MAIN CONTAINER ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.app-container {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    flex: 8%;
+    min-width: 82px;
+    background-color: #363636;
+}
+
+nav>div {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 8%;
+    min-width: 82px;
+    height: 100%;
+    background-color: #363636;
+}
+
+.main-container {
+    flex: 92%;
+}
+
+.logo-isi {
+    background-color: white;
+    flex: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-isi>img {
+    width: 100%;
+    display: block;
+}
+
+.menu-options {
+    flex: 85%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.menu-option {
+    font-size: xx-large;
+    position: relative;
+}
+
+.menu-option>p {
+    font-size: 12px;
+}
+
+.menu-option:hover {
+    cursor: pointer;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ USERS LISTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.list-title {
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+
+.view-logo {
+    height: 3.5em;
+    width: 3.5em;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.list-item {
+    background-color: #363636;
+    color: white;
+    margin: 15px 15%;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+/* .list-item-name {
+    padding-top: 12px;
+} */
+
+.search-bar-form {
+    padding-bottom: 20px;
+}
+
+.search-bar-form>div {
+    text-align: center;
+}
+
+.search-bar-form input[type='search'] {
+    background-color: #F15C6A;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    margin-right: 5px;
+}
+
+.search-bar-form input[type='search']::placeholder {
+    color: white;
+}
+
+.search-bar-form>div>div {
+    display: inline-block;
+    margin-left: 5%;
+}
+
+.admin-user-bar {
+    display: flex;
+    flex-direction: row;
+}
+
+.admin-user-bar>form {
+    flex: 80%;
+}
+
+.admin-user-bar>div {
+    flex: 20%;
+}
+
+.s-add-user-button {
+    font-family: 'Spartan', sans-serif;
+    background-color: #363636;
+    color: white;
+    padding: 10px;
+    display: block;
+    transition: .5s ease-in-out;
+    border: 0;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 12px;
+    margin: 5px auto;
+}
+
+.s-add-user-button:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: #000000 2px 3px 7px 0px;
+}
+
+.admin-users-btns button, .search-bar-form>div>div, .choose-enterprise-btn {
+    font-family: 'Spartan', sans-serif;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 10px;
+    border: 0;
+    margin: 0 10px;
+    transition: .5s ease-in-out;
+    text-align: center;
+}
+
+.admin-users-btns button:hover, .search-bar-form>div>div:hover, .choose-enterprise-btn:hover {
+    background-color: #d8d8d8;
+    cursor: pointer;
+    box-shadow: #a3a3a3 2px 3px 7px 0px;
+}
+
+.admin-users-btns button:focus, .search-bar-form>div>div:focus, .choose-enterprise-btn:focus {
+    outline: none;
+}
+
+.choose-enterprise-btn-container>div {
+    margin-bottom: 10px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ USER DETAILS ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.user-details {
+    text-align: center;
+    color: white;
+    background-color: #363636;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.user-details-r, .student-details-r {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    text-align: center;
+}
+
+.user-details-r-item, .student-details-r-item {
+    flex: 50%;
+}
+
+.user-details-r:nth-child(even) {
+    background-color: #000000;
+}
+
+.user-details-r:last-of-type, .student-details-r:last-of-type {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.details-company-logo, .details-user-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.user-details-r-schedule {
+    display: block;
+    background-color: #000000;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.user-details-r-schedule>p, .student-details-r-schedule>p {
+    padding: 25px 25px 0 25px;
+}
+
+.user-details-r-schedule>div, .student-details-r-schedule>div {
+    background-color: #C4C4C4;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.time-slot-box {
+    width: 80px;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 5px;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.time-slot-box-free {
+    background-color: #36BB48;
+}
+
+.span-free {
+    color: #36BB48;
+}
+
+.time-slot-box-busy {
+    background-color: #FA3939;
+}
+
+.span-busy {
+    color: #FA3939;
+}
+
+.time-slot-box-meeting {
+    background-color: #3c59ff;
+    pointer-events: none;
+}
+
+.span-meetings {
+    color: #3c59ff;
+}
+
+.modifiable-time-slot {
+    pointer-events: all;
+}
+
+.modifiable-time-slot:hover {
+    cursor: pointer;
+}
+
+.title-details {
+    color: white;
+    padding: 15px 0;
+}
+
+.title-details:first-of-type {
+    margin-top: 15px;
+}
+
+.student-details {
+    text-align: center;
+    color: black;
+    background-color: #D8D8D8;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.student-details-r:nth-child(even) {
+    background-color: white;
+}
+
+.student-details-r-schedule {
+    display: block;
+    background-color: #D8D8D8;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.student-details-r-schedule>div {
+    background-color: white;
+}
+
+.modify-button {
+    padding: 10px 0 20px 0;
+}
+
+.s-modify-button {
+    font-family: 'Spartan', sans-serif;
+    background-color: #363636;
+    color: white;
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+    display: block;
+    transition: .5s ease-in-out;
+    border: 0;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.user-modify-form form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.user-modify-form input:not([type='submit']) {
+    text-align: center;
+    width: 60%;
+    border-radius: 10px;
+    border: 0;
+    line-height: 3em;
+    transition: 0.5s ease-in-out;
+}
+
+.user-modify-form input:not([type='submit']):focus {
+    outline: none;
+    box-shadow: #000000 2px 3px 7px 0px;
+    width: 61%;
+}
+
+.user-modify-form-input-container {
+    background-color: #363636;
+    border-radius: 15px;
+    padding-block: 25px;
+    margin-block: 20px;
+}
+
+.user-modify-form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 0.5em;
+}
+
+.user-modify-form-input label {
+    font-size: 1.1em;
+    color: white;
+}
+
+.user-modify-form-select, .user-modify-bio {
+    width: 61%;
+    text-align: center;
+    color: black;
+}
+
+.user-modify-bio {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.cancel-button {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    padding: 10px 0 20px 0;
+}
+
+.return-btn, .modify-time-slot-btn {
+    font-family: 'Spartan', sans-serif;
+    background-color: #363636;
+    color: white;
+    padding: 5px;
+    margin-left: 5%;
+    transition: .5s ease-in-out;
+    border: 0;
+    border-radius: 10px;
+}
+
+.return-btn:focus, .modify-time-slot-btn:focus, .modify-time-slot-btn-white:focus {
+    outline: 0;
+}
+
+.return-btn:hover, .modify-time-slot-btn:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: #000000 2px 3px 7px 0px;
+}
+
+.modify-time-slot-btn-white {
+    font-family: 'Spartan', sans-serif;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    margin-left: 5%;
+    transition: .5s ease-in-out;
+    border: 0;
+    border-radius: 10px;
+}
+
+.modify-time-slot-btn-white:hover {
+    background-color: rgb(201, 201, 201);
+    color: black;
+    cursor: pointer;
+    box-shadow: rgb(192, 192, 192) 2px 3px 7px 0px;
+}
+
+.subscribed-btn {
+    font-family: 'Spartan', sans-serif;
+    background-color: #36BB48;
+    color: white;
+    padding: 10px;
+    width: 40%;
+    margin: 15px auto;
+    display: block;
+    transition: .5s ease-in-out;
+    border: 0;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.unsubscribed-btn {
+    font-family: 'Spartan', sans-serif;
+    background-color: #FA3939;
+    color: white;
+    padding: 10px;
+    width: 40%;
+    margin: 15px auto;
+    display: block;
+    transition: .5s ease-in-out;
+    border: 0;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.subscribed-btn:focus, .unsubscribed-btn:focus {
+    outline: none;
+}
+
+.subscribed-btn:hover, .unsubscribed-btn:hover {
+    background-color: #000000;
+    width: 41%;
+    color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: #000000 2px 3px 7px 0px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ ENTERPRISE DETAILS ~~~~~~~~~~~~~~~~~~~~~~ */
+.d-flex {
+    align-items: baseline;
+}
+
+.details-icon {
+    font-size: 1.5em;
+    color: white;
+    opacity: 50%;
+    transition: .2s ease-in-out;
+}
+
+.details-icon:hover {
+    opacity: 1;
+}
+
+.enterprise-details .return-btn {
+    margin-top: 10px;
+}
+
+.enterprise-details .enterprise-header {
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.enterprise-header img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-inline: 20px;
+}
+
+.enterprise-info {
+    text-align: center;
+    color: white;
+    background-color: #363636;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.enterprise-mission {
+    background-color: #000000;
+}
+
+.enterprise-mission:last-of-type {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.enterprise-details-m {
+    padding: 25px;
+}
+
+.enterprise-video {
+    background-color: #EC2F41;
+}
+
+.enterprise-video-frame {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+}
+
+.enterprise-employees h4 {
+    color: white;
+    text-align: center;
+}
+
+.s-button {
+    font-family: 'Spartan', sans-serif;
+    background-color: #363636;
+    color: white;
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+    display: block;
+    transition: .5s ease-in-out;
+    border: 0;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    /* box-shadow: #000000 1px 1px 1px 1px; */
+}
+
+.s-button:focus, .s-modify-button:focus, .s-add-user-button:focus {
+    outline: none;
+}
+
+.s-button:hover, .s-modify-button:hover {
+    background-color: #000000;
+    width: 41%;
+    color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: #000000 2px 3px 7px 0px;
+}
+
+.enterprise-details-form-input-container {
+    background-color: #363636;
+    border-radius: 15px;
+    padding-block: 25px;
+    margin-block: 20px;
+}
+
+.enterprise-details-form form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.enterprise-details-form input:not([type='submit']) {
+    text-align: center;
+    width: 60%;
+    border-radius: 15px;
+    border: 0;
+    line-height: 3em;
+    transition: 0.2s ease-in-out;
+}
+
+.enterprise-details-form input:not([type='submit']):focus {
+    outline: none;
+    box-shadow: #000000 2px 3px 7px 0px;
+    width: 62%;
+}
+
+.enterprise-details-form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 0.5em;
+}
+
+.enterprise-details-form-input label {
+    font-size: 1.1em;
+    color: white;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ CAREER DAY DETAILS ~~~~~~~~~~~~~~~~~~~~~~ */
+
+.career-day-dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+
+.career-day-dashboard-select {
+    width: 100%;
+}
+
+.career-day-dashboard-select select {
+    width: 100%;
+    height: 3em;
+    border-radius: 15px;
+    text-align: center;
+    border: 0;
+    opacity: 50%;
+    transition: .2s ease-in-out;
+}
+
+.career-day-dashboard-select select:focus {
+    outline: none;
+    opacity: 100%;
+}
+
+.career-day-dashboard-buttons {
+    margin-block: 30px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.career-day-dashboard-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 20px;
+    margin: 20px;
+    font-size: 1.3em;
+    border-radius: 15px;
+    transition: .2s ease-in-out;
+}
+
+.career-day-dashboard-button i {
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+.career-day-dashboard-button:hover {
+    background-color: #363636;
+    cursor: pointer;
+    box-shadow: #000000 2px 3px 7px 0px;
+}
+
+.career-day-dashboard-button.active {
+    background-color: #00F10A85;
+}
+
+.career-day-dashboard-button.inactive {
+    background-color: #FF0000FF;
+}
+
+#new-career-day-btn {
+    margin-top: 20px;
+}
+
+input[type="date"]::-webkit-inner-spin-button, input[type="date"]::-webkit-calendar-picker-indicator {
+    /* display: hidden; */
+    /* -webkit-appearance: none; */
+    padding-right: 10px;
+    color: #363636;
+    opacity: 75%;
+    /* background-color: #363636; */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ MEETINGS ~~~~~~~~~~~~~~~~~~~~~~ */
+
+.alert-meeting-container {
+    margin-block: 30px;
+    width: 70%;
+    margin-inline: auto;
+}
+
+.meeting-list-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.meeting-list-item .list-item {
+    width: 75%;
+    margin-bottom: 0;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.meeting-list-item .meeting-list-item-details {
+    padding: 10px;
+    width: 75%;
+    background-color: #C4C4C4;
+    border-radius: 0 0 15px 15px;
+    flex-direction: row;
+    justify-content: space-around;
+
+    display: flex;
+
+}
+
+#s-buttons .s-button {
+    width: 100%;
+    margin: 10px;
+    /* margin-bottom: 0; */
+
+}
+
+.meeting-list-item-details span {
+    font-weight: 800;
+}
+
+.cancel-btn {
+    background-color: #EC2F41;
+}
+
+.cancel-btn:hover {
+    background-color: #ff0019;
+}
+
+.meeting-list-item .meeting-details-show {
+    /* display: flex; */
+    justify-content: space-around;
+    padding: 10px;
+    align-items: baseline;
+    transition: .5s ease-in-out;
+    opacity: 1;
+}
+
+.meeting-list-item .meetings-details-hide {
+    opacity: 0;
+    display: none;
+    transition: .5s ease-in-out;
+
+}
+
+#s-button-link {
+    color: white;
+    text-decoration: none;
+}
+
+.margin-bottom {
+    margin-block: 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ MEETINGS CREATION ~~~~~~~~~~~~~~~~~~~~~~ */
+
+.job-details-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #888888;
+    color: white;
+    margin: 15px 15%;
+    border-radius: 15px;
+    font-size: 15px;
+    overflow-y: auto;
+}
+
+.job-details-container-desc {
+    background-color: #888888;
+    color: white;
+    margin: 15px 15% 0 15%;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.job-details-container>div {
+    flex: 15%;
+    padding: 15px;
+    text-align: center;
+}
+
+.job-details-container>div:nth-child(even) {
+    background-color: #969696;
+}
+
+.s-job-modify-button {
+    font-family: 'Spartan', sans-serif;
+    background-color: #363636;
+    color: white;
+    padding: 10px;
+    /* width: 80%; */
+    margin: auto auto 10px auto;
+    display: block;
+    transition: .5s ease-in-out;
+    border: 0;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.s-job-modify-button:focus {
+    outline: none;
+}
+
+.s-job-modify-button:hover {
+    background-color: #000000;
+    /* width: 81%; */
+    color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: #000000 2px 3px 7px 0px;
+}
+
+.match-details {
+    display: flex;
+    flex-direction: row;
+    background-color: #929292;
+    color: white;
+    margin: 15px 15%;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.match-details div:first-of-type {
+    flex: 70%;
+    padding: 15px;
+}
+
+.match-details div:last-of-type {
+    flex: 30%;
+    padding: 15px;
+}
+
+.match-item:hover {
+    cursor: pointer;
+}
+
+.match-schedule {
+    background-color: #929292;
+    color: white;
+    margin: 15px 15%;
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 15px;
+}
+
+.match-schedule-time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.match-schedule-time-slots>div {
+    text-align: center;
+}
+
+.choose-employee-btn {
+    margin: 15px 0;
+}
+
+.meeting-form form {
+    width: 100%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ MODAL ~~~~~~~~~~~~~~~~~~~~~~ */
+
+.Modal {
+    position: absolute;
+    z-index: 10;
+    top: 15%;
+    right: 20%;
+    left: 20%;
+    bottom: 35%;
+    /* border: 1px sol
+    /* border: 1px solid rgb(204, 204, 204); */
+    background: #363636;
+    color: white;
+    overflow: auto;
+    border-radius: 15px;
+    outline: none;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.Modal .s-button {
+    background-color: #000000;
+}
+
+.Modal .s-button-accept:hover {
+    background-color: rgba(15, 84, 15, 0.652);
+}
+
+.Modal .s-button-decline:hover {
+    background-color: rgba(252, 3, 3, 0.652);
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: #000000; */
+    background-color: #000000db;
+    opacity: 98%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~NOTIFICATIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.new-notification-alert {
+    background-color: red;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+}
+
+.new-notification-alert-small {
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+}
+
+.new-notification-alert-medium {
+    width: 22px;
+    height: 22px;
+    font-size: 13px;
+    padding-top: 2px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/*
+    ----------------------------------------------------------- TABLET -----------------------------------------------------------
+*/
+
+@media only screen and (max-width:769px) {
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~~~~BURGUER MENU~~~~~~~~~~~~~~ */
+    .menu-options {
+        width: 100vw;
+        flex: 85%;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+        position: fixed;
+        bottom: -5px;
+        background-color: #000000;
+        padding: 10px;
+        z-index: 100;
+        flex-wrap: wrap;
+    }
+
+    .app-container {
+        flex-direction: column;
+    }
+
+    .menu-option {
+        font-size: x-large;
+        padding: 10px;
+    }
+
+    .job-details-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #888888;
+        color: white;
+        margin: 15px 15%;
+        border-radius: 15px;
+        font-size: 15px;
+    }
+
+    .match-details {
+        display: flex;
+        flex-direction: column;
+        background-color: #929292;
+        color: white;
+        text-align: center;
+        margin: 15px 15%;
+        border-radius: 15px;
+        font-size: 15px;
+    }
+
+    .job-details-container>div {
+        border-radius: 15px;
+    }
+
+    /* .job-details-container:last-child{
+
+    } */
+
+    .menu-option p {
+        display: none;
+    }
+
+    .main-container {
+        flex: 92%;
+        margin-bottom: 100px;
+    }
+
+    .logo-isi {
+        display: none;
+    }
+
+    nav>div {
+        width: 100%;
+        position: relative;
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~ LOGIN ~~~~~~~~~~~~~~~~~~~~~~ */
+    .form-container {
+        width: 90%;
+    }
+
+    .form-container input:not([type="checkbox"]) {
+        width: 75%;
+    }
+
+    .form-container input[type="submit"], .form-container button {
+        width: 50%;
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~ DASHBOARD ~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* nav {
+        display: none;
+    } */
+
+    .career-day-dashboard-container {
+        width: 100%;
+    }
+
+    .career-day-dashboard-container .list-title {
+        font-size: 1.3em;
+    }
+
+    .career-day-dashboard-button {
+        width: 39%;
+    }
+
+    .career-day-dashboard-buttons {
+        margin: 0;
+    }
+
+    .career-day-dashboard-select {
+        width: 90%;
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~ ENTERPRISE DETAILS ~~~~~~~~~~~~~~~~~~~~~~ */
+
+    .enterprise-details .enterprise-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enterprise-header img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .enterprise-info .enterprise-video {
+        width: 100%;
+    }
+
+    .enterprise-info {
+        width: 100%;
+        border-radius: 0;
+
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~ ENTERPRISE MODIFY FORM ~~~~~~~~~~~~~~~~~~~~~~ */
+
+    .enterprise-details-form form {
+        width: 100%;
+    }
+
+    .enterprise-details-form-input-container {
+        border-radius: 0;
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~ USER LIST ~~~~~~~~~~~~~~~~~~~~~~ */
+
+    .admin-user-bar {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .list-item {
+        margin: 15px 10px;
+    }
+
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~ USER DETAILS  ~~~~~~~~~~~~~~~~~~~~~~ */
+
+    .student-details {
+        width: 100%;
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~ USER MODIFY FORM  ~~~~~~~~~~~~~~~~~~~~~~ */
+
+    .user-modify-form form {
+        width: 90%;
+        text-align: center;
+    }
+
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~ LISTE MEETINGS  ~~~~~~~~~~~~~~~~~~~~~~ */
+
+    .meeting-list-item .list-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meeting-list-item .list-item-name {
+        margin-block: 10px;
+    }
+
+    .meeting-list-item .meeting-list-item-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .meeting-list-item .list-item {
+        width: 80%;
+        border-radius: 15px;
+
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~ ADMIN PROFIL  ~~~~~~~~~~~~~~~~~~~~~~ */
+
+    .user-details {
+        width: 90%;
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~ NOTIFICATIONS  ~~~~~~~~~~~~~~~~~~~~~~ */
+
+    .new-notification-alert {
+        right: 14%;
+    }
+
+}
+
+/*
+    ----------------------------------------------------------- DESKTOP -----------------------------------------------------------
+*/
+
+@media only screen and (min-width:769px) {
+
+    /* ~~~~~~~~~~~~~NOTIFICATIONS~~~~~~~~~~~~~~ */
+
+    .new-notification-alert {
+        right: 18%;
+    }
+
+    #collapsible {
+        display: none;
+    }
+
+    .lbl-toggle {
+        display: block;
+        font-family: 'Spartan', sans-serif;
+        font-size: 12px;
+        text-align: center;
+
+        color: #fdfdfb;
+        background: #363636;
+        cursor: pointer;
+
+    }
+
+    .collapsible-content .content-inner {
+        background: rgba(247, 94, 83, 0.4);
+        padding: .5rem 1rem;
+    }
+
+    .collapsible-content {
+        font-size: 12px;
+        max-height: 0px;
+        max-width: 0px;
+        overflow: hidden;
+        transition: max-width .25s ease-in-out;
+    }
+
+    .toggle:checked+.lbl-toggle+.collapsible-content {
+        max-height: 400px;
+        max-width: 10%;
+        position: fixed;
+        top: 0px;
+        left: 8%;
+        overflow: scroll;
+    }
+
+    .notif-item {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background: rgba(247, 94, 83, 0.5);
+    }
+
+    .notif-item:hover {
+        background: rgba(247, 94, 83, 1);
+    }
+
+    .notif-item-read {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background: #363636;
+    }
+}

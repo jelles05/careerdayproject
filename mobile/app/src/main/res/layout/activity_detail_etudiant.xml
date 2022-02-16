@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6ED1B2F"
+    android:orientation="vertical"
+    tools:context=".DetailEtudiant">
+
+    <LinearLayout
+        android:id="@+id/formulaire_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.mobile.views.HeaderLogoView
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Informations Personnelles"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/img_student"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:contentDescription="Image user"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_user" />
+
+        <com.example.mobile.views.FieldView
+            android:id="@+id/name_field_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@color/gray_field"
+            app:label="Nom"
+            app:value="Saint-Laurent" />
+
+        <com.example.mobile.views.FieldView
+            android:id="@+id/firstname_field_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@color/black"
+            app:label="Prénom"
+            app:value="Yves" />
+
+        <com.example.mobile.views.FieldView
+            android:id="@+id/language_field_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@color/gray_field"
+            app:label="Langues"
+            app:value="francais, anglais" />
+
+        <com.example.mobile.views.FieldView
+            android:id="@+id/province_field_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@color/black"
+            app:label="Province"
+            app:value="Quebec" />
+
+        <com.example.mobile.views.FieldView
+            android:id="@+id/formation_field_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@color/gray_field"
+            app:label="Formation suivi"
+            app:value="Programmation et technologies web" />
+
+        <!--        <com.example.mobile.views.FieldView-->
+        <!--            android:id="@+id/transport_field_view"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:color="@color/gray_field"-->
+        <!--            app:label="Methode de transport"-->
+        <!--            app:value="Voiture" />-->
+
+        <!--        <com.example.mobile.views.FieldView-->
+        <!--            android:id="@+id/demenager_field_view"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:color="@color/black"-->
+        <!--            app:label="accepte de demenager?"-->
+        <!--            app:value="non" />-->
+
+        <com.example.mobile.views.FieldView
+            android:id="@+id/teletravail_field_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@color/black"
+            app:label="Accepte le télétravail?"
+            app:value="Oui" />
+
+        <com.example.mobile.views.FieldView
+            android:id="@+id/disponible_field_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@color/gray_field"
+            app:label="Disponible à partir de"
+            app:value="2021-12-31T00:00:00.000Z" />
+
+        <com.example.mobile.views.FieldView
+            android:id="@+id/interest_field_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:color="@color/black"
+            app:label="Biographie"
+            app:value="intelligence artificiel,Raspberry pi" />
+
+
+        <!--    Compentance Section    -->
+        <LinearLayout
+            android:id="@+id/competance_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/black"
+                android:text="Compétences"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="35dp" />
+
+            <LinearLayout
+                android:id="@+id/competance_field_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/dark_gray"
+                        android:text="Languages et technologies de programmation"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/skill_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/black"
+                        android:gravity="center"
+                        android:text="C/C++,SQL,Java,C#"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,1400 @@
+<!doctype html>
+<html>
+  <head>
+    <title>defaultTitle</title>
+    <style type="text/css">
+      body {
+      	font-family: Trebuchet MS, sans-serif;
+      	font-size: 15px;
+      	color: #444;
+      	margin-right: 24px;
+      }
+      
+      h1	{
+      	font-size: 25px;
+      }
+      h2	{
+      	font-size: 20px;
+      }
+      h3	{
+      	font-size: 16px;
+      	font-weight: bold;
+      }
+      hr	{
+      	height: 1px;
+      	border: 0;
+      	color: #ddd;
+      	background-color: #ddd;
+      }
+      
+      .app-desc {
+        clear: both;
+        margin-left: 20px;
+      }
+      .param-name {
+        width: 100%;
+      }
+      .license-info {
+        margin-left: 20px;
+      }
+      
+      .license-url {
+        margin-left: 20px;
+      }
+      
+      .model {
+        margin: 0 0 0px 20px;
+      }
+      
+      .method {
+        margin-left: 20px;
+      }
+      
+      .method-notes	{
+      	margin: 10px 0 20px 0;
+      	font-size: 90%;
+      	color: #555;
+      }
+      
+      pre {
+        padding: 10px;
+        margin-bottom: 2px;
+      }
+      
+      .http-method {
+       text-transform: uppercase;
+      }
+      
+      pre.get {
+        background-color: #0f6ab4;
+      }
+      
+      pre.post {
+        background-color: #10a54a;
+      }
+      
+      pre.put {
+        background-color: #c5862b;
+      }
+      
+      pre.delete {
+        background-color: #a41e22;
+      }
+      
+      .huge	{
+      	color: #fff;
+      }
+      
+      pre.example {
+        background-color: #f3f3f3;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      
+      code {
+        white-space: pre;
+      }
+      
+      .nickname {
+        font-weight: bold;
+      }
+      
+      .method-path {
+        font-size: 1.5em;
+        background-color: #0f6ab4;
+      }
+      
+      .up {
+        float:right;
+      }
+      
+      .parameter {
+        width: 500px;
+      }
+      
+      .param {
+        width: 500px;
+        padding: 10px 0 0 20px;
+        font-weight: bold;
+      }
+      
+      .param-desc {
+        width: 700px;
+        padding: 0 0 0 20px;
+        color: #777;
+      }
+      
+      .param-type {
+        font-style: italic;
+      }
+      
+      .param-enum-header {
+      width: 700px;
+      padding: 0 0 0 60px;
+      color: #777;
+      font-weight: bold;
+      }
+      
+      .param-enum {
+      width: 700px;
+      padding: 0 0 0 80px;
+      color: #777;
+      font-style: italic;
+      }
+      
+      .field-label {
+        padding: 0;
+        margin: 0;
+        clear: both;
+      }
+      
+      .field-items	{
+      	padding: 0 0 15px 0;
+      	margin-bottom: 15px;
+      }
+      
+      .return-type {
+        clear: both;
+        padding-bottom: 10px;
+      }
+      
+      .param-header {
+        font-weight: bold;
+      }
+      
+      .method-tags {
+        text-align: right;
+      }
+      
+      .method-tag {
+        background: none repeat scroll 0% 0% #24A600;
+        border-radius: 3px;
+        padding: 2px 10px;
+        margin: 2px;
+        color: #FFF;
+        display: inline-block;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+  <h1>defaultTitle</h1>
+    <div class="app-desc">defaultDescription</div>
+    <div class="app-desc">More information: <a href="https://helloreverb.com">https://helloreverb.com</a></div>
+    <div class="app-desc">Contact Info: <a href="hello@helloreverb.com">hello@helloreverb.com</a></div>
+    <div class="app-desc">Version: 0.1</div>
+    
+    <div class="license-info">All rights reserved</div>
+    <div class="license-url">http://apache.org/licenses/LICENSE-2.0.html</div>
+  <h2>Access</h2>
+
+  <h2><a name="__Methods">Methods</a></h2>
+  [ Jump to <a href="#__Models">Models</a> ]
+
+  <h3>Table of Contents </h3>
+  <div class="method-summary"></div>
+  <h4><a href="#Default">Default</a></h4>
+  <ul>
+  <li><a href="#attendancePost"><code><span class="http-method">post</span> /attendance</code></a></li>
+  <li><a href="#careerDay1Enterprises1CriteriaGet"><code><span class="http-method">get</span> /career_day/1/enterprises/1/criteria</code></a></li>
+  <li><a href="#careerDay1Enterprises1MeetingsCompleteGet"><code><span class="http-method">get</span> /career_day/1/enterprises/1/meetingsComplete</code></a></li>
+  <li><a href="#careerDay1MeetingsCompleteGet"><code><span class="http-method">get</span> /career_day/1/meetingsComplete</code></a></li>
+  <li><a href="#careerDay1Users2MeetingsCompleteGet"><code><span class="http-method">get</span> /career_day/1/users/2/meetingsComplete</code></a></li>
+  <li><a href="#careerDayIsActiveGet"><code><span class="http-method">get</span> /career_day/is_active</code></a></li>
+  <li><a href="#enterprisesAttendance1Get"><code><span class="http-method">get</span> /enterprises/attendance/1</code></a></li>
+  <li><a href="#enterprisesCriteria48Delete"><code><span class="http-method">delete</span> /enterprises/criteria/48</code></a></li>
+  <li><a href="#enterprisesCriteriaPost"><code><span class="http-method">post</span> /enterprises/criteria</code></a></li>
+  <li><a href="#programs1Get"><code><span class="http-method">get</span> /programs/1</code></a></li>
+  <li><a href="#programsGet"><code><span class="http-method">get</span> /programs</code></a></li>
+  <li><a href="#roles1Get"><code><span class="http-method">get</span> /roles/1</code></a></li>
+  <li><a href="#rolesGet"><code><span class="http-method">get</span> /roles</code></a></li>
+  <li><a href="#studentsAttendance1Get"><code><span class="http-method">get</span> /students/attendance/1</code></a></li>
+  <li><a href="#timeSlots1Get"><code><span class="http-method">get</span> /time-slots/1</code></a></li>
+  <li><a href="#timeSlots62Delete"><code><span class="http-method">delete</span> /time-slots/62</code></a></li>
+  <li><a href="#timeSlotsPost"><code><span class="http-method">post</span> /time-slots</code></a></li>
+  <li><a href="#user2Attendance1Get"><code><span class="http-method">get</span> /user/2/attendance/1</code></a></li>
+  <li><a href="#users2TimeSlotsGet"><code><span class="http-method">get</span> /users/2/time-slots</code></a></li>
+  </ul>
+
+  <h1><a name="Default">Default</a></h1>
+  <div class="method"><a name="attendancePost"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /attendance</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">attendancePost</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">body <a href="#attendance_body">attendance_body</a> (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+            <div class="param-desc"><span class="param-type">example: <code>{
+  &quot;value&quot; : &quot;{\r\n            \r\n            \&quot;id_user\&quot;: 63,\r\n            \&quot;id_career_day\&quot;: 4\r\n}&quot;
+}</code></span></div>    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_2">inline_response_200_2</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : 6,
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_2">inline_response_200_2</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Attendance added&quot;,&quot;data&quot;:1}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="careerDay1Enterprises1CriteriaGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /career_day/1/enterprises/1/criteria</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">careerDay1Enterprises1CriteriaGet</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_7">inline_response_200_7</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : [ {
+    "id_province" : 6,
+    "work_from_home" : true,
+    "description" : "description",
+    "id_program" : 1,
+    "title" : "title",
+    "work_start_date" : "work_start_date",
+    "id_criteria" : 5
+  }, {
+    "id_province" : 6,
+    "work_from_home" : true,
+    "description" : "description",
+    "id_program" : 1,
+    "title" : "title",
+    "work_start_date" : "work_start_date",
+    "id_criteria" : 5
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_7">inline_response_200_7</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Enterprise found&quot;,&quot;data&quot;:[{&quot;title&quot;:&quot;Programmeur Junior&quot;,&quot;description&quot;:&quot;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&quot;,&quot;id_criteria&quot;:41,&quot;id_program&quot;:2,&quot;id_province&quot;:11,&quot;work_from_home&quot;:true,&quot;work_start_date&quot;:&quot;2022-02-28T00:00:00.000Z&quot;},{&quot;title&quot;:&quot;Designer graphique&quot;,&quot;description&quot;:&quot;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.&quot;,&quot;id_criteria&quot;:48,&quot;id_program&quot;:6,&quot;id_province&quot;:8,&quot;work_from_home&quot;:true,&quot;work_start_date&quot;:&quot;2022-02-01T00:00:00.000Z&quot;}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="careerDay1Enterprises1MeetingsCompleteGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /career_day/1/enterprises/1/meetingsComplete</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">careerDay1Enterprises1MeetingsCompleteGet</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_1">inline_response_200_1</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : [ {
+    "id_career_day" : 6,
+    "logo_url" : "logo_url",
+    "employee_name" : "employee_name",
+    "virtual_meeting_url" : "",
+    "program" : "program",
+    "room" : 1,
+    "student_name" : "student_name",
+    "date_time" : "date_time",
+    "id_meeting_type" : 5,
+    "id_employee" : 5,
+    "id" : 2,
+    "enterprise_name" : "enterprise_name",
+    "id_student" : 7
+  }, {
+    "id_career_day" : 6,
+    "logo_url" : "logo_url",
+    "employee_name" : "employee_name",
+    "virtual_meeting_url" : "",
+    "program" : "program",
+    "room" : 1,
+    "student_name" : "student_name",
+    "date_time" : "date_time",
+    "id_meeting_type" : 5,
+    "id_employee" : 5,
+    "id" : 2,
+    "enterprise_name" : "enterprise_name",
+    "id_student" : 7
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_1">inline_response_200_1</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Meetings found - Enterprise 1&quot;,&quot;data&quot;:[{&quot;program&quot;:&quot;Programming and Internet Technologies&quot;,&quot;id&quot;:2,&quot;enterprise_name&quot;:&quot;Instagram&quot;,&quot;logo_url&quot;:&quot;ENT1insta.jpg&quot;,&quot;room&quot;:500,&quot;employee_name&quot;:&quot;Émile&quot;,&quot;student_name&quot;:&quot;Hugo&quot;,&quot;id_employee&quot;:3,&quot;id_student&quot;:2,&quot;virtual_meeting_url&quot;:null,&quot;date_time&quot;:&quot;9h&quot;,&quot;id_meeting_type&quot;:1,&quot;id_career_day&quot;:1},{&quot;program&quot;:&quot;Programming and Internet Technologies&quot;,&quot;id&quot;:20,&quot;enterprise_name&quot;:&quot;Instagram&quot;,&quot;logo_url&quot;:&quot;ENT1insta.jpg&quot;,&quot;room&quot;:500,&quot;employee_name&quot;:&quot;Emilien&quot;,&quot;student_name&quot;:&quot;João&quot;,&quot;id_employee&quot;:60,&quot;id_student&quot;:55,&quot;virtual_meeting_url&quot;:&quot;https://google.com&quot;,&quot;date_time&quot;:&quot;9h40&quot;,&quot;id_meeting_type&quot;:1,&quot;id_career_day&quot;:1}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="careerDay1MeetingsCompleteGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /career_day/1/meetingsComplete</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">careerDay1MeetingsCompleteGet</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_1">inline_response_200_1</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : [ {
+    "id_career_day" : 6,
+    "logo_url" : "logo_url",
+    "employee_name" : "employee_name",
+    "virtual_meeting_url" : "",
+    "program" : "program",
+    "room" : 1,
+    "student_name" : "student_name",
+    "date_time" : "date_time",
+    "id_meeting_type" : 5,
+    "id_employee" : 5,
+    "id" : 2,
+    "enterprise_name" : "enterprise_name",
+    "id_student" : 7
+  }, {
+    "id_career_day" : 6,
+    "logo_url" : "logo_url",
+    "employee_name" : "employee_name",
+    "virtual_meeting_url" : "",
+    "program" : "program",
+    "room" : 1,
+    "student_name" : "student_name",
+    "date_time" : "date_time",
+    "id_meeting_type" : 5,
+    "id_employee" : 5,
+    "id" : 2,
+    "enterprise_name" : "enterprise_name",
+    "id_student" : 7
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_1">inline_response_200_1</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Meetings list&quot;,&quot;data&quot;:[{&quot;program&quot;:&quot;Programming and Internet Technologies&quot;,&quot;id&quot;:2,&quot;enterprise_name&quot;:&quot;Instagram&quot;,&quot;logo_url&quot;:&quot;ENT1insta.jpg&quot;,&quot;room&quot;:500,&quot;employee_name&quot;:&quot;Émile&quot;,&quot;student_name&quot;:&quot;Hugo&quot;,&quot;id_employee&quot;:3,&quot;id_student&quot;:2,&quot;virtual_meeting_url&quot;:null,&quot;date_time&quot;:&quot;9h&quot;,&quot;id_meeting_type&quot;:1,&quot;id_career_day&quot;:1},{&quot;program&quot;:&quot;Programming and Internet Technologies&quot;,&quot;id&quot;:18,&quot;enterprise_name&quot;:&quot;Ubisoft Montréal&quot;,&quot;logo_url&quot;:&quot;ENT6ubi.jpg&quot;,&quot;room&quot;:123,&quot;employee_name&quot;:&quot;Nate&quot;,&quot;student_name&quot;:&quot;James&quot;,&quot;id_employee&quot;:19,&quot;id_student&quot;:53,&quot;virtual_meeting_url&quot;:&quot;null&quot;,&quot;date_time&quot;:&quot;9h&quot;,&quot;id_meeting_type&quot;:2,&quot;id_career_day&quot;:1},{&quot;program&quot;:&quot;Video Game Programming&quot;,&quot;id&quot;:21,&quot;enterprise_name&quot;:&quot;EA Games&quot;,&quot;logo_url&quot;:&quot;ENT7ea.jpg&quot;,&quot;room&quot;:321,&quot;employee_name&quot;:&quot;Juliana&quot;,&quot;student_name&quot;:&quot;Blair&quot;,&quot;id_employee&quot;:20,&quot;id_student&quot;:48,&quot;virtual_meeting_url&quot;:&quot;null&quot;,&quot;date_time&quot;:&quot;9h&quot;,&quot;id_meeting_type&quot;:2,&quot;id_career_day&quot;:1},{&quot;program&quot;:&quot;Website Integration&quot;,&quot;id&quot;:3,&quot;enterprise_name&quot;:&quot;EA Games&quot;,&quot;logo_url&quot;:&quot;ENT7ea.jpg&quot;,&quot;room&quot;:321,&quot;employee_name&quot;:&quot;Juliana&quot;,&quot;student_name&quot;:&quot;Celine&quot;,&quot;id_employee&quot;:20,&quot;id_student&quot;:24,&quot;virtual_meeting_url&quot;:null,&quot;date_time&quot;:&quot;10h&quot;,&quot;id_meeting_type&quot;:1,&quot;id_career_day&quot;:1},{&quot;program&quot;:&quot;Programming and Internet Technologies&quot;,&quot;id&quot;:20,&quot;enterprise_name&quot;:&quot;Instagram&quot;,&quot;logo_url&quot;:&quot;ENT1insta.jpg&quot;,&quot;room&quot;:500,&quot;employee_name&quot;:&quot;Emilien&quot;,&quot;student_name&quot;:&quot;João&quot;,&quot;id_employee&quot;:60,&quot;id_student&quot;:55,&quot;virtual_meeting_url&quot;:&quot;https://google.com&quot;,&quot;date_time&quot;:&quot;9h40&quot;,&quot;id_meeting_type&quot;:1,&quot;id_career_day&quot;:1},{&quot;program&quot;:&quot;Programming and Internet Technologies&quot;,&quot;id&quot;:22,&quot;enterprise_name&quot;:&quot;Google&quot;,&quot;logo_url&quot;:&quot;ENT34google.jpg&quot;,&quot;room&quot;:0,&quot;employee_name&quot;:&quot;Peter&quot;,&quot;student_name&quot;:&quot;João&quot;,&quot;id_employee&quot;:65,&quot;id_student&quot;:55,&quot;virtual_meeting_url&quot;:&quot;null&quot;,&quot;date_time&quot;:&quot;10h&quot;,&quot;id_meeting_type&quot;:2,&quot;id_career_day&quot;:1},{&quot;program&quot;:&quot;Programming and Internet Technologies&quot;,&quot;id&quot;:24,&quot;enterprise_name&quot;:&quot;Gameloft&quot;,&quot;logo_url&quot;:&quot;ENT36MicrosoftTeams-image.png&quot;,&quot;room&quot;:502,&quot;employee_name&quot;:&quot;Lauren&quot;,&quot;student_name&quot;:&quot;Juliana&quot;,&quot;id_employee&quot;:69,&quot;id_student&quot;:70,&quot;virtual_meeting_url&quot;:&quot;null&quot;,&quot;date_time&quot;:&quot;9h40&quot;,&quot;id_meeting_type&quot;:1,&quot;id_career_day&quot;:1},{&quot;program&quot;:&quot;Programming and Internet Technologies&quot;,&quot;id&quot;:2,&quot;enterprise_name&quot;:&quot;ISI Montréal&quot;,&quot;logo_url&quot;:&quot;ENT8isi.png&quot;,&quot;room&quot;:500,&quot;employee_name&quot;:&quot;Émile&quot;,&quot;student_name&quot;:&quot;Hugo&quot;,&quot;id_employee&quot;:3,&quot;id_student&quot;:2,&quot;virtual_meeting_url&quot;:null,&quot;date_time&quot;:&quot;9h&quot;,&quot;id_meeting_type&quot;:1,&quot;id_career_day&quot;:1}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="careerDay1Users2MeetingsCompleteGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /career_day/1/users/2/meetingsComplete</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">careerDay1Users2MeetingsCompleteGet</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_5">inline_response_200_5</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : [ {
+    "id_career_day" : 6,
+    "logo_url" : "logo_url",
+    "employee_name" : "employee_name",
+    "virtual_meeting_url" : "",
+    "program" : "program",
+    "enterprise_id" : 1,
+    "room" : 5,
+    "student_name" : "student_name",
+    "date_time" : "date_time",
+    "id_meeting_type" : 5,
+    "id_employee" : 2,
+    "id" : 7,
+    "enterprise_name" : "enterprise_name",
+    "id_student" : 9
+  }, {
+    "id_career_day" : 6,
+    "logo_url" : "logo_url",
+    "employee_name" : "employee_name",
+    "virtual_meeting_url" : "",
+    "program" : "program",
+    "enterprise_id" : 1,
+    "room" : 5,
+    "student_name" : "student_name",
+    "date_time" : "date_time",
+    "id_meeting_type" : 5,
+    "id_employee" : 2,
+    "id" : 7,
+    "enterprise_name" : "enterprise_name",
+    "id_student" : 9
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_5">inline_response_200_5</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Meetings found - USER 2&quot;,&quot;data&quot;:[{&quot;id&quot;:2,&quot;program&quot;:&quot;Programming and Internet Technologies&quot;,&quot;enterprise_id&quot;:1,&quot;enterprise_name&quot;:&quot;Instagram&quot;,&quot;logo_url&quot;:&quot;ENT1insta.jpg&quot;,&quot;room&quot;:500,&quot;employee_name&quot;:&quot;Émile&quot;,&quot;student_name&quot;:&quot;Hugo&quot;,&quot;id_employee&quot;:3,&quot;id_student&quot;:2,&quot;virtual_meeting_url&quot;:null,&quot;date_time&quot;:&quot;9h&quot;,&quot;id_meeting_type&quot;:1,&quot;id_career_day&quot;:1},{&quot;id&quot;:2,&quot;program&quot;:&quot;Programming and Internet Technologies&quot;,&quot;enterprise_id&quot;:8,&quot;enterprise_name&quot;:&quot;ISI Montréal&quot;,&quot;logo_url&quot;:&quot;ENT8isi.png&quot;,&quot;room&quot;:500,&quot;employee_name&quot;:&quot;Émile&quot;,&quot;student_name&quot;:&quot;Hugo&quot;,&quot;id_employee&quot;:3,&quot;id_student&quot;:2,&quot;virtual_meeting_url&quot;:null,&quot;date_time&quot;:&quot;9h&quot;,&quot;id_meeting_type&quot;:1,&quot;id_career_day&quot;:1}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="careerDayIsActiveGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /career_day/is_active</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">careerDayIsActiveGet</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_8">inline_response_200_8</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_8">inline_response_200_8</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Error&quot;}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="enterprisesAttendance1Get"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /enterprises/attendance/1</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">enterprisesAttendance1Get</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_9">inline_response_200_9</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : [ {
+    "mission" : "mission",
+    "video_url" : "video_url",
+    "logo_url" : "logo_url",
+    "name" : "name",
+    "description" : "description",
+    "employe_target" : "employe_target",
+    "id" : 6,
+    "room" : 1
+  }, {
+    "mission" : "mission",
+    "video_url" : "video_url",
+    "logo_url" : "logo_url",
+    "name" : "name",
+    "description" : "description",
+    "employe_target" : "employe_target",
+    "id" : 6,
+    "room" : 1
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_9">inline_response_200_9</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Attendance list&quot;,&quot;data&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;Instagram&quot;,&quot;description&quot;:&quot;Lorem ipsum spinen spleinen&quot;,&quot;employe_target&quot;:&quot;Créatifs et autonomes.&quot;,&quot;logo_url&quot;:&quot;ENT1insta.jpg&quot;,&quot;mission&quot;:&quot;Améliorer la vie des gens.&quot;,&quot;room&quot;:500,&quot;video_url&quot;:&quot;VID1cine.mp4&quot;},{&quot;id&quot;:6,&quot;name&quot;:&quot;Ubisoft Montréal&quot;,&quot;description&quot;:&quot;Ubisoft Montréal&quot;,&quot;employe_target&quot;:&quot;Des jeunes motivés et avec plein d&#x27;energie&quot;,&quot;logo_url&quot;:&quot;ENT6ubi.jpg&quot;,&quot;mission&quot;:&quot;Faire des jeux video.&quot;,&quot;room&quot;:123,&quot;video_url&quot;:&quot;VID6cine.mp4&quot;},{&quot;id&quot;:7,&quot;name&quot;:&quot;EA Games&quot;,&quot;description&quot;:&quot;EA Games&quot;,&quot;employe_target&quot;:&quot;Des jeunes motivés et avec plein d&#x27;energie&quot;,&quot;logo_url&quot;:&quot;ENT7ea.jpg&quot;,&quot;mission&quot;:&quot;Faire des jeux video.&quot;,&quot;room&quot;:321,&quot;video_url&quot;:&quot;VID7cine.mp4&quot;},{&quot;id&quot;:34,&quot;name&quot;:&quot;Google&quot;,&quot;description&quot;:&quot; Lorem ipsum&quot;,&quot;employe_target&quot;:&quot;Lorem ipsum&quot;,&quot;logo_url&quot;:&quot;ENT34google.jpg&quot;,&quot;mission&quot;:&quot;Lorem ipsum&quot;,&quot;room&quot;:0,&quot;video_url&quot;:&quot;VID34cine.mp4&quot;}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="enterprisesCriteria48Delete"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /enterprises/criteria/48</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">enterprisesCriteria48Delete</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_2">inline_response_200_2</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : 6,
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_2">inline_response_200_2</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Deleted&quot;,&quot;data&quot;:1}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="enterprisesCriteriaPost"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /enterprises/criteria</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">enterprisesCriteriaPost</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">body <a href="#enterprises_criteria_body">enterprises_criteria_body</a> (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+            <div class="param-desc"><span class="param-type">example: <code>{
+  &quot;value&quot; : &quot;{\r\n            \r\n            \&quot;title\&quot;: \&quot;Programmeur Junior\&quot;,\r\n            \&quot;description\&quot;: \&quot;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\&quot;,\r\n            \&quot;id_criteria\&quot;: 41,\r\n            \&quot;idEnterprise\&quot;:1,\r\n            \&quot;idCareerDay\&quot;: 1\r\n}&quot;
+}</code></span></div>    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_2">inline_response_200_2</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : 6,
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_2">inline_response_200_2</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Enterprise added&quot;,&quot;data&quot;:1}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="programs1Get"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /programs/1</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">programs1Get</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_4">inline_response_200_4</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "language" : [ {
+    "id" : 6,
+    "program" : "program"
+  }, {
+    "id" : 6,
+    "program" : "program"
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_4">inline_response_200_4</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Program&quot;,&quot;language&quot;:[{&quot;id&quot;:1,&quot;program&quot;:&quot;Programming and Internet Technologies&quot;}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="programsGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /programs</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">programsGet</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_10">inline_response_200_10</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "languages" : [ {
+    "id" : 6,
+    "program" : "program"
+  }, {
+    "id" : 6,
+    "program" : "program"
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_10">inline_response_200_10</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Programs List&quot;,&quot;languages&quot;:[{&quot;id&quot;:1,&quot;program&quot;:&quot;Programming and Internet Technologies&quot;},{&quot;id&quot;:2,&quot;program&quot;:&quot;Programming, Networks and Security&quot;},{&quot;id&quot;:3,&quot;program&quot;:&quot;Video Game Programming&quot;},{&quot;id&quot;:4,&quot;program&quot;:&quot;Computer Networks and Security&quot;},{&quot;id&quot;:5,&quot;program&quot;:&quot;IT Project Management&quot;},{&quot;id&quot;:6,&quot;program&quot;:&quot;Website Integration&quot;}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="roles1Get"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /roles/1</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">roles1Get</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200">inline_response_200</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : [ {
+    "role" : "role",
+    "id" : 6
+  }, {
+    "role" : "role",
+    "id" : 6
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200">inline_response_200</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Role found&quot;,&quot;data&quot;:[{&quot;id&quot;:1,&quot;role&quot;:&quot;Admin&quot;}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="rolesGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /roles</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">rolesGet</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200">inline_response_200</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : [ {
+    "role" : "role",
+    "id" : 6
+  }, {
+    "role" : "role",
+    "id" : 6
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200">inline_response_200</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Role list&quot;,&quot;data&quot;:[{&quot;id&quot;:1,&quot;role&quot;:&quot;Admin&quot;},{&quot;id&quot;:2,&quot;role&quot;:&quot;Student&quot;},{&quot;id&quot;:3,&quot;role&quot;:&quot;Employee&quot;},{&quot;id&quot;:4,&quot;role&quot;:&quot;Employer&quot;}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="studentsAttendance1Get"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /students/attendance/1</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">studentsAttendance1Get</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="timeSlots1Get"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /time-slots/1</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">timeSlots1Get</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_3">inline_response_200_3</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : [ {
+    "id" : 6,
+    "id_user" : 1,
+    "time_slot" : "time_slot"
+  }, {
+    "id" : 6,
+    "id_user" : 1,
+    "time_slot" : "time_slot"
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_3">inline_response_200_3</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Time-slot found&quot;,&quot;data&quot;:[{&quot;id&quot;:1,&quot;id_user&quot;:2,&quot;time_slot&quot;:&quot;9h&quot;}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="timeSlots62Delete"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /time-slots/62</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">timeSlots62Delete</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_2">inline_response_200_2</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : 6,
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_2">inline_response_200_2</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Deleted&quot;,&quot;data&quot;:1}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="timeSlotsPost"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /time-slots</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">timeSlotsPost</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">body <a href="#timeslots_body">timeslots_body</a> (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+            <div class="param-desc"><span class="param-type">example: <code>{
+  &quot;value&quot; : &quot;{\r\n            \r\n            \&quot;id_user\&quot;: 3,\r\n            \&quot;time_slot\&quot;: \&quot;11h\&quot;\r\n}&quot;
+}</code></span></div>    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_2">inline_response_200_2</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : 6,
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_2">inline_response_200_2</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Time-slot added&quot;,&quot;data&quot;:1}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="user2Attendance1Get"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /user/2/attendance/1</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">user2Attendance1Get</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_6">inline_response_200_6</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : true,
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_6">inline_response_200_6</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;User present&quot;,&quot;data&quot;:true}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="users2TimeSlotsGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /users/2/time-slots</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">users2TimeSlotsGet</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_3">inline_response_200_3</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : [ {
+    "id" : 6,
+    "id_user" : 1,
+    "time_slot" : "time_slot"
+  }, {
+    "id" : 6,
+    "id_user" : 1,
+    "time_slot" : "time_slot"
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_3">inline_response_200_3</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Time-slot list&quot;,&quot;data&quot;:[{&quot;id&quot;:1,&quot;id_user&quot;:2,&quot;time_slot&quot;:&quot;9h&quot;}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+
+  <h2><a name="__Models">Models</a></h2>
+  [ Jump to <a href="#__Methods">Methods</a> ]
+
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#attendance_body"><code>attendance_body</code></a></li>
+    <li><a href="#enterprises_criteria_body"><code>enterprises_criteria_body</code></a></li>
+    <li><a href="#inline_response_200"><code>inline_response_200</code></a></li>
+    <li><a href="#inline_response_200_1"><code>inline_response_200_1</code></a></li>
+    <li><a href="#inline_response_200_10"><code>inline_response_200_10</code></a></li>
+    <li><a href="#inline_response_200_2"><code>inline_response_200_2</code></a></li>
+    <li><a href="#inline_response_200_3"><code>inline_response_200_3</code></a></li>
+    <li><a href="#inline_response_200_4"><code>inline_response_200_4</code></a></li>
+    <li><a href="#inline_response_200_5"><code>inline_response_200_5</code></a></li>
+    <li><a href="#inline_response_200_6"><code>inline_response_200_6</code></a></li>
+    <li><a href="#inline_response_200_7"><code>inline_response_200_7</code></a></li>
+    <li><a href="#inline_response_200_8"><code>inline_response_200_8</code></a></li>
+    <li><a href="#inline_response_200_9"><code>inline_response_200_9</code></a></li>
+    <li><a href="#timeslots_body"><code>timeslots_body</code></a></li>
+  </ol>
+
+  <div class="model">
+    <h3><a name="attendance_body"><code>attendance_body</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">id_career_day (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">id_user (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="enterprises_criteria_body"><code>enterprises_criteria_body</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">idEnterprise (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">description (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">title (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">id_criteria (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">idCareerDay (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200"><code>inline_response_200</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">array[Object]</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200_1"><code>inline_response_200_1</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">array[Object]</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200_10"><code>inline_response_200_10</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">languages (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">array[Object]</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200_2"><code>inline_response_200_2</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200_3"><code>inline_response_200_3</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">array[Object]</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200_4"><code>inline_response_200_4</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">language (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">array[Object]</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200_5"><code>inline_response_200_5</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">array[Object]</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200_6"><code>inline_response_200_6</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200_7"><code>inline_response_200_7</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">array[Object]</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200_8"><code>inline_response_200_8</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200_9"><code>inline_response_200_9</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">array[Object]</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="timeslots_body"><code>timeslots_body</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">id_user (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">time_slot (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  </body>
+</html>

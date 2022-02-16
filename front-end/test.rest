@@ -1,0 +1,18 @@
+POST http://localhost:8080/login HTTP/1.1
+content-type: application/json
+
+{ "email": "exemple@gmail.com", "password": "1234" }
+
+###
+
+GET http://localhost:8080/users HTTP/1.1
+
+###
+
+GET http://localhost:8080/enterprise/2 HTTP/1.1
+
+###
+
+GET http://localhost:8080/users/role/4 HTTP/1.1
+
+###

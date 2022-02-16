@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MeetingSettings">
+
+    <com.example.mobile.views.HeaderLogoView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15" />
+
+    <LinearLayout
+        android:id="@+id/ll_meeting_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="85"
+        android:background="@color/red_background"
+        android:orientation="vertical">
+
+        <!--input field virtual meeting-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--label-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Virtual meeting url"
+                android:textSize="22sp" />
+            <!--input-->
+            <EditText
+                android:id="@+id/edit_text_virtual_meeting_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <!--input field meeting type presentiel virtuel-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--label-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Type du meeting"
+                android:textSize="22sp" />
+            <!--input-->
+            <Spinner
+                android:id="@+id/spinner_meeting_type_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <!--input field date heure-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--label heure meeting-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Heure du meeting"
+                android:textSize="22sp" />
+            <!--input-->
+            <Spinner
+                android:id="@+id/spinner_meeting_horaire_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_modifier_meeting_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sauvegarder" />
+
+        <Button
+            android:id="@+id/btn_annuler_meeting_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Annuler" />
+
+    </LinearLayout>
+
+</LinearLayout>

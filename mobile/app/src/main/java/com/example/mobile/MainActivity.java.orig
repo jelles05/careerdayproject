@@ -1,0 +1,220 @@
+package com.example.mobile;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.mobile.entities.Response;
+import com.example.mobile.entities.ResponseAttendance;
+import com.example.mobile.entities.User;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
+public class MainActivity extends AppCompatActivity {
+    private static String HTTP_REQUEST_ATTENDANCE = "https://aqueous-temple-81741.herokuapp.com/user/9/attendance/1";
+    private static String HTTP_REQUEST_ACTIVE_CAREER_DAY = "https://aqueous-temple-81741.herokuapp.com/career_day/is_active";
+    private static String REPLACE_CHARACTER_INDICATOR = "9";
+    private static String REPLACE_ID_CAREERDAY_INDICATOR = "1";
+    Context ctx = this;
+    //String isActive;
+    String isActive;
+    String idUser;
+    String idCareerDay;
+    String activeCareerDayResponse;
+    private static String dataAttendance = null;
+    EditText editEmail, editPassword;
+    private Button btnSignIn;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        editEmail = (EditText) findViewById(R.id.username);
+        editPassword = (EditText) findViewById(R.id.password);
+
+        editEmail.setText("projetfinalheroku@gmail.com");//admin
+//        editEmail.setText("nat@gmail.com");//employee pw 123456 joaom@gmail.com
+//        editEmail.setText("ebouchard@gmail.com");//employe
+        //editEmail.setText("danhumphrey@gmail.com");//employee  joaom@gmail.com
+        //editEmail.setText("ebouchard@gmail.com");//employe
+        //editEmail.setText("joaom@gmail.com");//employeur
+        //editEmail.setText("joao@gmail.com");//etudiant inscrit a la journee carriere
+        editPassword.setText("1234");
+
+
+        btnSignIn = findViewById(R.id.sign_in);
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AsyncTaskRequest(ctx, btnSignIn).execute("https://aqueous-temple-81741.herokuapp.com/login");
+            }
+        });
+
+
+
+
+    }
+
+    public static String fetchAttendance(String idUser, String idCareerDay) throws ExecutionException, InterruptedException {
+        String temp = HTTP_REQUEST_ATTENDANCE.replace(REPLACE_CHARACTER_INDICATOR, idUser);
+        String request = temp.replace(REPLACE_ID_CAREERDAY_INDICATOR, idCareerDay);
+        com.example.mobile.utilities.AsyncTaskRequest asyncTask = new com.example.mobile.utilities.AsyncTaskRequest(MainActivity.class);
+        dataAttendance = asyncTask.execute(request).get();
+        Log.d("logD", String.valueOf(dataAttendance));
+        return dataAttendance;
+    }
+
+    private class AsyncTaskRequest extends AsyncTask<String, Nullable, String> {
+        Context ctx;
+        Button btnSignIn;
+        public AsyncTaskRequest(Context ctx, Button btnSignIn) {
+            this.ctx = ctx;
+            this.btnSignIn = btnSignIn;
+        }
+        @Override
+        protected String doInBackground(String... strings) {
+            String response = null;
+            HttpURLConnection connection = null;
+            try {
+                URL url = new URL(strings[0]);
+                connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("POST");
+                connection.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
+                connection.setRequestProperty("Accept", "application/json");
+                connection.setDoOutput(true);
+                connection.setDoInput(true);
+                String jsonString = "{\"email\": \"" + editEmail.getText().toString() + "\", \"password\": \"" + editPassword.getText().toString() + "\"}";
+                DataOutputStream output = new DataOutputStream(connection.getOutputStream());
+                output.writeBytes(jsonString);
+                output.flush();
+                output.close();
+                int responseCode = connection.getResponseCode();
+                //Log.d("debugApp", "response code: " + responseCode);
+                if (responseCode == 200) {
+                    InputStream inputStream = connection.getInputStream();
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+                    response = reader.readLine();
+                } else {
+                    response = null;
+                }
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                connection.disconnect();
+            }
+            return response;
+        }
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            if (s != null) {
+                //Log.d("debugApp","response "+s);
+                Response response = new Gson().fromJson(s, Response.class);
+                //Log.d("debugApp", "response " + response.getDatalist());
+                ArrayList<User> users = new ArrayList<>();
+                Gson json = new Gson();
+                Object o = response.getDatalist()[0];
+                //Log.d("debugApp", "response " + o);
+                String test = json.toJson(o);
+                User u = json.fromJson(test, User.class);
+                //Log.d("debugApp", "onPostExecute: " + u.getId_role());
+                setSharePrefenceIdUser(u);
+
+                String idrolevalue = String.valueOf(u.getId_role());
+                String idvalue = String.valueOf(u.getId());
+                idUser=idvalue;
+                try {
+                    com.example.mobile.utilities.AsyncTaskRequest asyncTask = new com.example.mobile.utilities.AsyncTaskRequest(MainActivity.class);
+                    activeCareerDayResponse = asyncTask.execute(HTTP_REQUEST_ACTIVE_CAREER_DAY).get();
+                }catch (ExecutionException | InterruptedException e){
+                    e.printStackTrace();
+                }
+                JsonObject activeCareerDay = new Gson().fromJson(activeCareerDayResponse, JsonObject.class);
+                JsonElement data = activeCareerDay.get("data");
+                if (data != null){
+                    idCareerDay = String.valueOf(data.getAsJsonArray().get(0).getAsJsonObject().get("id"));
+                } else {
+                    idCareerDay = null;
+                }
+
+                Log.d("logD", String.valueOf(idCareerDay));
+
+                try {
+                    if(idCareerDay != null){
+                        isActive = fetchAttendance(idUser, idCareerDay);
+                    }
+
+
+                } catch (ExecutionException | InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Log.d("logD", String.valueOf(dataAttendance));
+                ResponseAttendance responseActive = new Gson().fromJson(dataAttendance, ResponseAttendance.class);
+                //Log.d("debugApp", "inscrit a la journee carriere: " + responseActive.getDataAttendance());
+
+                String emailvalue = String.valueOf(u.getEmail());
+                String pwvalue = String.valueOf(u.getPassword());
+                String prenomvalue = String.valueOf(u.getName());
+                String nomvalue = String.valueOf(u.getLast_name());
+                Intent intent = new Intent(ctx, Dashboard.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("prenomkey", prenomvalue);
+                intent.putExtra("nomkey", nomvalue);
+                intent.putExtra("emailkey", emailvalue);
+                intent.putExtra("pwkey", pwvalue);
+                intent.putExtra("idrolekey", idrolevalue);
+                intent.putExtra("idkey", idvalue);
+
+
+                //pour gerer les attendances
+                //startActivity(intent);
+
+                if (responseActive != null||Integer.valueOf(idrolevalue) == 1){
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(MainActivity.this, "Vous n’êtes pas inscrit a la journée carrière en cours !", Toast.LENGTH_LONG).show();
+                    Intent intentAttend = new Intent(ctx, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intentAttend);
+                }
+
+            } else {
+                Toast.makeText(MainActivity.this, "username ou password incorrect ! re essayer svp", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(ctx, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        }
+        private void setSharePrefenceIdUser(User u) {
+            SharedPreferences sharedPref = getSharedPreferences("User", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            Log.d("debug", "setSharePrefenceIdUser: id user:" + u.getId());
+            editor.putInt("idUser", u.getId());
+            editor.apply();
+        }
+    }
+}

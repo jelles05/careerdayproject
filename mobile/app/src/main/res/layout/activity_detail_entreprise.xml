@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red_background"
+    tools:context=".DetailEntreprise">
+
+    <LinearLayout
+        android:id="@+id/details_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.mobile.views.HeaderLogoView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20" />
+
+        <ImageView
+            android:id="@+id/image_logo_entreprise"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:contentDescription="Logo entreprise"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_entreprise" />
+
+        <TextView
+            android:id="@+id/name_entreprise_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="Nom de l'entreprise"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+        <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:text="Informations sur l'entreprise"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <com.example.mobile.views.TextFieldView
+            android:id="@+id/text_field_container1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text_area="im am a lot of text that descripbe the companie description and i am alone and lonely so please come work for me"
+            app:title="Qui somme nous?" />
+
+        <com.example.mobile.views.TextFieldView
+            android:id="@+id/text_field_container2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text_area="im am a lot of text that descripbe the companie description and i am alone and lonely so please come work for me"
+            app:title="Notre mission" />
+
+        <com.example.mobile.views.TextFieldView
+            android:id="@+id/text_field_container3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text_area="im am a lot of text that descripbe the companie description and i am alone and lonely so please come work for me"
+            app:title="Qui cherchons-nous?" />
+
+    </LinearLayout>
+</ScrollView>

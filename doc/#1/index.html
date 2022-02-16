@@ -1,0 +1,488 @@
+<!doctype html>
+<html>
+  <head>
+    <title>defaultTitle</title>
+    <style type="text/css">
+      body {
+      	font-family: Trebuchet MS, sans-serif;
+      	font-size: 15px;
+      	color: #444;
+      	margin-right: 24px;
+      }
+      
+      h1	{
+      	font-size: 25px;
+      }
+      h2	{
+      	font-size: 20px;
+      }
+      h3	{
+      	font-size: 16px;
+      	font-weight: bold;
+      }
+      hr	{
+      	height: 1px;
+      	border: 0;
+      	color: #ddd;
+      	background-color: #ddd;
+      }
+      
+      .app-desc {
+        clear: both;
+        margin-left: 20px;
+      }
+      .param-name {
+        width: 100%;
+      }
+      .license-info {
+        margin-left: 20px;
+      }
+      
+      .license-url {
+        margin-left: 20px;
+      }
+      
+      .model {
+        margin: 0 0 0px 20px;
+      }
+      
+      .method {
+        margin-left: 20px;
+      }
+      
+      .method-notes	{
+      	margin: 10px 0 20px 0;
+      	font-size: 90%;
+      	color: #555;
+      }
+      
+      pre {
+        padding: 10px;
+        margin-bottom: 2px;
+      }
+      
+      .http-method {
+       text-transform: uppercase;
+      }
+      
+      pre.get {
+        background-color: #0f6ab4;
+      }
+      
+      pre.post {
+        background-color: #10a54a;
+      }
+      
+      pre.put {
+        background-color: #c5862b;
+      }
+      
+      pre.delete {
+        background-color: #a41e22;
+      }
+      
+      .huge	{
+      	color: #fff;
+      }
+      
+      pre.example {
+        background-color: #f3f3f3;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      
+      code {
+        white-space: pre;
+      }
+      
+      .nickname {
+        font-weight: bold;
+      }
+      
+      .method-path {
+        font-size: 1.5em;
+        background-color: #0f6ab4;
+      }
+      
+      .up {
+        float:right;
+      }
+      
+      .parameter {
+        width: 500px;
+      }
+      
+      .param {
+        width: 500px;
+        padding: 10px 0 0 20px;
+        font-weight: bold;
+      }
+      
+      .param-desc {
+        width: 700px;
+        padding: 0 0 0 20px;
+        color: #777;
+      }
+      
+      .param-type {
+        font-style: italic;
+      }
+      
+      .param-enum-header {
+      width: 700px;
+      padding: 0 0 0 60px;
+      color: #777;
+      font-weight: bold;
+      }
+      
+      .param-enum {
+      width: 700px;
+      padding: 0 0 0 80px;
+      color: #777;
+      font-style: italic;
+      }
+      
+      .field-label {
+        padding: 0;
+        margin: 0;
+        clear: both;
+      }
+      
+      .field-items	{
+      	padding: 0 0 15px 0;
+      	margin-bottom: 15px;
+      }
+      
+      .return-type {
+        clear: both;
+        padding-bottom: 10px;
+      }
+      
+      .param-header {
+        font-weight: bold;
+      }
+      
+      .method-tags {
+        text-align: right;
+      }
+      
+      .method-tag {
+        background: none repeat scroll 0% 0% #24A600;
+        border-radius: 3px;
+        padding: 2px 10px;
+        margin: 2px;
+        color: #FFF;
+        display: inline-block;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+  <h1>defaultTitle</h1>
+    <div class="app-desc">defaultDescription</div>
+    <div class="app-desc">More information: <a href="https://helloreverb.com">https://helloreverb.com</a></div>
+    <div class="app-desc">Contact Info: <a href="hello@helloreverb.com">hello@helloreverb.com</a></div>
+    <div class="app-desc">Version: 0.1</div>
+    
+    <div class="license-info">All rights reserved</div>
+    <div class="license-url">http://apache.org/licenses/LICENSE-2.0.html</div>
+  <h2>Access</h2>
+
+  <h2><a name="__Methods">Methods</a></h2>
+  [ Jump to <a href="#__Models">Models</a> ]
+
+  <h3>Table of Contents </h3>
+  <div class="method-summary"></div>
+  <h4><a href="#Default">Default</a></h4>
+  <ul>
+  <li><a href="#enterprises25Put"><code><span class="http-method">put</span> /enterprises/25</code></a></li>
+  <li><a href="#enterprises37Delete"><code><span class="http-method">delete</span> /enterprises/37</code></a></li>
+  <li><a href="#enterprisesPost"><code><span class="http-method">post</span> /enterprises</code></a></li>
+  <li><a href="#studentsGet"><code><span class="http-method">get</span> /students</code></a></li>
+  </ul>
+
+  <h1><a name="Default">Default</a></h1>
+  <div class="method"><a name="enterprises25Put"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="put"><code class="huge"><span class="http-method">put</span> /enterprises/25</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">enterprises25Put</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">body <a href="#enterprises_25_body">enterprises_25_body</a> (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+            <div class="param-desc"><span class="param-type">example: <code>{
+  &quot;value&quot; : &quot;{\r\n            \&quot;name\&quot;: \&quot;Instagram\&quot;,\r\n            \&quot;description\&quot;: \&quot;Lorem ipsum spinen spleinen\&quot;,\r\n            \&quot;mission\&quot;: \&quot;Améliorer la vie des gens.\&quot;,\r\n            \&quot;employe_target\&quot;: \&quot;Créatifs et autonomes.\&quot;,\r\n            \&quot;room\&quot;: 500,\r\n            \&quot;video_url\&quot;: \&quot;VID1cine.mp4\&quot;,\r\n            \&quot;logo_url\&quot;: \&quot;ENT1insta.jpg\&quot;\r\n}&quot;
+}</code></span></div>    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_1">inline_response_200_1</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : 6,
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_1">inline_response_200_1</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Enterprise updated&quot;,&quot;data&quot;:1}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="enterprises37Delete"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="delete"><code class="huge"><span class="http-method">delete</span> /enterprises/37</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">enterprises37Delete</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_1">inline_response_200_1</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : 6,
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_1">inline_response_200_1</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Deleted&quot;,&quot;data&quot;:1}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="enterprisesPost"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /enterprises</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">enterprisesPost</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">body <a href="#enterprises_body">enterprises_body</a> (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+            <div class="param-desc"><span class="param-type">example: <code>{
+  &quot;value&quot; : &quot;{\r\n            \&quot;name\&quot;: \&quot;Instagram\&quot;,\r\n            \&quot;description\&quot;: \&quot;Lorem ipsum spinen spleinen\&quot;,\r\n            \&quot;mission\&quot;: \&quot;Améliorer la vie des gens.\&quot;,\r\n            \&quot;employe_target\&quot;: \&quot;Créatifs et autonomes.\&quot;,\r\n            \&quot;room\&quot;: 500,\r\n            \&quot;video_url\&quot;: \&quot;VID1cine.mp4\&quot;,\r\n            \&quot;logo_url\&quot;: \&quot;ENT1insta.jpg\&quot;\r\n}&quot;
+}</code></span></div>    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200_1">inline_response_200_1</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : 6,
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200_1">inline_response_200_1</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Enterprise added&quot;,&quot;data&quot;:1}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="studentsGet"></a>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /students</code></pre></div>
+    <div class="method-summary"> (<span class="nickname">studentsGet</span>)</div>
+    <div class="method-notes">Auto generated using Swagger Inspector</div>
+
+
+
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#inline_response_200">inline_response_200</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "status_code" : 0,
+  "data" : [ {
+    "name" : "name",
+    "cv_url" : "cv_url",
+    "id_role" : 6,
+    "last_name" : "last_name",
+    "profile_image_url" : "profile_image_url",
+    "id" : 1,
+    "biography" : "biography",
+    "email" : "email",
+    "id_criteria" : 5
+  }, {
+    "name" : "name",
+    "cv_url" : "cv_url",
+    "id_role" : 6,
+    "last_name" : "last_name",
+    "profile_image_url" : "profile_image_url",
+    "id" : 1,
+    "biography" : "biography",
+    "email" : "email",
+    "id_criteria" : 5
+  } ],
+  "message" : "message"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Auto generated using Swagger Inspector
+        <a href="#inline_response_200">inline_response_200</a>
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: 0</div>
+    <pre class="example"><code>{&quot;status_code&quot;:200,&quot;message&quot;:&quot;Student list&quot;,&quot;data&quot;:[{&quot;email&quot;:&quot;yarrhugo@gmail.com&quot;,&quot;id&quot;:2,&quot;id_role&quot;:2,&quot;last_name&quot;:&quot;Meunier&quot;,&quot;name&quot;:&quot;Hugo&quot;,&quot;id_criteria&quot;:1,&quot;cv_url&quot;:&quot;ECV2CSharp.pdf&quot;,&quot;biography&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;,&quot;profile_image_url&quot;:&quot;ETU2homme3.jpg&quot;},{&quot;email&quot;:&quot;jenny@mail.com&quot;,&quot;id&quot;:49,&quot;id_role&quot;:2,&quot;last_name&quot;:&quot;Humphrey&quot;,&quot;name&quot;:&quot;Jenny&quot;,&quot;id_criteria&quot;:20,&quot;cv_url&quot;:&quot;ECV49html.pdf&quot;,&quot;biography&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;,&quot;profile_image_url&quot;:&quot;ETU49femme2.jpg&quot;},{&quot;email&quot;:&quot;james@gmail.com&quot;,&quot;id&quot;:53,&quot;id_role&quot;:2,&quot;last_name&quot;:&quot;Bond&quot;,&quot;name&quot;:&quot;James&quot;,&quot;id_criteria&quot;:31,&quot;cv_url&quot;:&quot;ECV53html.pdf&quot;,&quot;biography&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;,&quot;profile_image_url&quot;:&quot;ETU53homme4.jpg&quot;},{&quot;email&quot;:&quot;joao@gmail.com&quot;,&quot;id&quot;:55,&quot;id_role&quot;:2,&quot;last_name&quot;:&quot;Mesquita&quot;,&quot;name&quot;:&quot;João&quot;,&quot;id_criteria&quot;:52,&quot;cv_url&quot;:null,&quot;biography&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;,&quot;profile_image_url&quot;:&quot;ETU55image.jpg&quot;},{&quot;email&quot;:&quot;jlopez@gmail.com&quot;,&quot;id&quot;:66,&quot;id_role&quot;:2,&quot;last_name&quot;:&quot;Lopez&quot;,&quot;name&quot;:&quot;Jennifer&quot;,&quot;id_criteria&quot;:54,&quot;cv_url&quot;:null,&quot;biography&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;,&quot;profile_image_url&quot;:&quot;ETU66femme1.jpg&quot;},{&quot;email&quot;:&quot;cdion@mail.com&quot;,&quot;id&quot;:24,&quot;id_role&quot;:2,&quot;last_name&quot;:&quot;Dion&quot;,&quot;name&quot;:&quot;Celine&quot;,&quot;id_criteria&quot;:6,&quot;cv_url&quot;:&quot;ECV24PHP.pdf&quot;,&quot;biography&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;,&quot;profile_image_url&quot;:&quot;ETU24celine.jpg&quot;},{&quot;email&quot;:&quot;gabriel@mail.com&quot;,&quot;id&quot;:33,&quot;id_role&quot;:2,&quot;last_name&quot;:&quot;Lavigueur&quot;,&quot;name&quot;:&quot;Gabriel&quot;,&quot;id_criteria&quot;:10,&quot;cv_url&quot;:&quot;ECV33programmation-objet-java2.pdf&quot;,&quot;biography&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;,&quot;profile_image_url&quot;:&quot;ETU33homme2.jpg&quot;},{&quot;email&quot;:&quot;tmomsen@gmail.com&quot;,&quot;id&quot;:57,&quot;id_role&quot;:2,&quot;last_name&quot;:&quot;Momsen&quot;,&quot;name&quot;:&quot;Taylor&quot;,&quot;id_criteria&quot;:45,&quot;cv_url&quot;:&quot;https://isi-mtl.com/en/&quot;,&quot;biography&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;,&quot;profile_image_url&quot;:&quot;ETU57taylor.jpg&quot;},{&quot;email&quot;:&quot;blair@mail.com&quot;,&quot;id&quot;:48,&quot;id_role&quot;:2,&quot;last_name&quot;:&quot;Waldorf&quot;,&quot;name&quot;:&quot;Blair&quot;,&quot;id_criteria&quot;:19,&quot;cv_url&quot;:&quot;ECV48CSharp.pdf&quot;,&quot;biography&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;,&quot;profile_image_url&quot;:&quot;ETU48profile-pic.jpg&quot;},{&quot;email&quot;:&quot;jelles@gmail.com&quot;,&quot;id&quot;:70,&quot;id_role&quot;:2,&quot;last_name&quot;:&quot;Elles&quot;,&quot;name&quot;:&quot;Juliana&quot;,&quot;id_criteria&quot;:57,&quot;cv_url&quot;:null,&quot;biography&quot;:&quot;lorem ipsum&quot;,&quot;profile_image_url&quot;:null}]}</code></pre>
+  </div> <!-- method -->
+  <hr/>
+
+  <h2><a name="__Models">Models</a></h2>
+  [ Jump to <a href="#__Methods">Methods</a> ]
+
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#enterprises_25_body"><code>enterprises_25_body</code></a></li>
+    <li><a href="#enterprises_body"><code>enterprises_body</code></a></li>
+    <li><a href="#inline_response_200"><code>inline_response_200</code></a></li>
+    <li><a href="#inline_response_200_1"><code>inline_response_200_1</code></a></li>
+  </ol>
+
+  <div class="model">
+    <h3><a name="enterprises_25_body"><code>enterprises_25_body</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">mission (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">video_url (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">logo_url (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">description (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">employe_target (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">room (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="enterprises_body"><code>enterprises_body</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">mission (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">video_url (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">logo_url (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">description (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">employe_target (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">room (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200"><code>inline_response_200</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">array[Object]</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="inline_response_200_1"><code>inline_response_200_1</code></a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">status_code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  </body>
+</html>

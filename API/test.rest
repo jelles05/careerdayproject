@@ -1,0 +1,141 @@
+GET http://localhost:5000/languages HTTP/1.1
+
+###
+
+GET http://localhost:5000/languages/6 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+GET http://localhost:8080/users/1/languages HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+GET http://localhost:5000/skills HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+GET http://localhost:8080/users/1/skills HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+GET http://localhost:8080/criteria/1 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+
+###
+
+POST http://localhost:5000/criteria HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+# playlist_id=1&title=teste&uri=teste&master_id=12332
+id_province=1&work_from_home=true&id_program=1
+
+###
+
+POST http://localhost:8080/criteria/2 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+# playlist_id=1&title=teste&uri=teste&master_id=12332
+id_province=1&work_from_home=false&id_program=3
+
+###
+
+GET http://localhost:8080/career_day/1 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+GET http://localhost:5000/career_day HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+
+###
+
+POST http://localhost:8080/career_day HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+title=test&day=1&month=11&year=2023
+
+###
+
+PUT http://localhost:8080/career_day/4 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+title=testUpdate&day=4&month=5&year=2023&is_active=true
+
+###
+
+
+DELETE http://localhost:8080/career_day HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+id=3
+
+
+GET http://localhost:8080/province HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+GET http://localhost:8080/province/1 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+GET http://localhost:8080/meetings HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+GET http://localhost:8080/meetings/1 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+###
+
+GET http://localhost:5000/users/1/meetings HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+POST http://localhost:5000/meetings HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+id_employee=2&id_student=1&virtual_meeting_url=test&id_meeting_type=1&id_career_day=5
+
+###
+
+PUT http://localhost:5000/meetings/8 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+id_employee=2&id_student=1&virtual_meeting_url=testUpdate&id_meeting_type=1&id_career_day=5
+
+###
+
+GET http://localhost:5000/users HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+POST http://localhost:5000/users HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+GET http://localhost:5000/users/2 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+PUT http://aqueous-temple-81741.herokuapp.com/meetings/2 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+id_employee=3&id_student=2&virtual_meeting_url=mymeetinglink.enterprise.com&date_time=9h&id_meeting_type=1&id_career_day=1
+
+###
+
+PUT http://aqueous-temple-81741.herokuapp.com/meetings/34 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+id_employee=19&id_student=24&virtual_meeting_url=mymeetinglink.enterprise.com&date_time=9h20&id_meeting_type=2&id_career_day=1
